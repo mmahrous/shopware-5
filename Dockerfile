@@ -6,13 +6,14 @@ RUN apt-get update && apt-get install -y \
         git \
         wget \
         ant \
+        libfreetype6-dev \
         libpng12-dev \
         libjpeg-dev \
         zlib1g-dev \
         openjdk-7-jdk \
         mysql-client \
     && rm -rf /var/lib/apt/lists/* \
-    && docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
+    && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-png-dir=/usr --with-jpeg-dir=/usr \
     && docker-php-ext-install gd mysql mysqli zip mbstring pdo pdo_mysql soap
 
 
