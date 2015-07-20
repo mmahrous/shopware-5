@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
         libpng12-dev \
         libjpeg-dev \
         zlib1g-dev \
+        libxml2-dev \
         openjdk-7-jdk \
         mysql-client \
     && rm -rf /var/lib/apt/lists/* \
