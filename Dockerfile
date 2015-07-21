@@ -1,5 +1,11 @@
 FROM slicemenice/php-apache-rewrite
 
+# ant              - required to configure and build Shopware 5
+# composer         - not directly required by Shopware 5, as the build will also install a local composer for Shopware, but you can also use it to install Shopware via https://packagist.org/packages/shopware/shopware
+# curl, git, wget  - necessary to execute tasks defined in Shopware's build.xml and for composer to install dependencies
+# openjdk-7-jdk    - required by Ant
+# mysql-client     - required by Shopware's build.xml to connect to the SQL database server located in another docker container
+# xdebug           - used for debugging PHP
 
 RUN apt-get update && apt-get install -y \
         ant \
