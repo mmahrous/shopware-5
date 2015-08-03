@@ -1,5 +1,7 @@
 FROM slicemenice/php-apache-rewrite
 
+RUN a2enmod ssl
+
 # ant              - required to configure and build Shopware 5
 # composer         - not directly required by Shopware 5, as the build will also install a local composer for Shopware, but you can also use it to install Shopware via https://packagist.org/packages/shopware/shopware
 # curl, git, wget  - necessary to execute tasks defined in Shopware's build.xml and for composer to install dependencies
