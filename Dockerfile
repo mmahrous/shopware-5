@@ -65,3 +65,6 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
 
 # install grunt
 RUN npm install -g grunt-cli
+
+#install bower
+RUN npm install -g bower
